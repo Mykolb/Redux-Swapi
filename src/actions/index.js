@@ -20,7 +20,7 @@ export const getCharacter = () => dispatch => {
             'https://swapi.co/api/people'
         )
         .then(response => 
-            dispatch({ type: FETCH_CHARACTER_SUCCESS, payload: response.data})
+            dispatch({ type: FETCH_CHARACTER_SUCCESS, payload: response.data.results})
             )
         .catch(error =>
             dispatch({ type: FETCH_CHARACTER_FAILURE, payload: error})
