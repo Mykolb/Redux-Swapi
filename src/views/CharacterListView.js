@@ -31,12 +31,13 @@ class CharacterListView extends React.Component {
 
 // our mapStateToProps needs to have two properties inherited from state
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+  return {
   characters: state.charsReducer.characters,
   fetching: state.charsReducer.fetching,
   error: state.charsReducer.error
-})
-
+  }
+}
 //need to add reducer function after state. since it has initial state & action 
 
 
